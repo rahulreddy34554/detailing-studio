@@ -57,14 +57,20 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
           <div>
-            <h3 className="text-xl font-bold mb-4">Cras</h3>
+            <h3 className="text-xl font-bold mb-4">
+            <img 
+              src="https://saboodetailingstudio.com/logo.png" 
+              alt="Sabo Detailing Studio Logo"
+              className="h-20 w-auto object-contain"
+            />
+            </h3>
             <p className="text-gray-400">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
             <div className="flex items-center mt-4">
               <div className="bg-red-600 p-2 rounded-full mr-2">📞</div>
-              <p className="text-xl font-bold">(406) 555-0120</p>
+              <p className="text-xl font-bold"> 9848898488</p>
             </div>
           </div>
 
@@ -92,9 +98,9 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-2">LOCATION & CONTACT</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>📍 901 N Pitt Str., Suite 170, Alexandria, NY, USA</li>
-              <li>✉️ example@email.com</li>
-              <li>📅 Sun - Thu: Open 24/7</li>
+              <li>📍 Saboo-towers</li>
+              <li>✉️ saboodetailingstudio@gmail.com</li>
+              <li>📅 Sun -: Open 24/7</li>
             </ul>
           </div>
         </div>
