@@ -45,16 +45,16 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="text-2xl font-bold">
-            <img 
+           <a href='/'> <img 
               src="https://saboodetailingstudio.com/logo.png" 
               alt="Sabo Detailing Studio Logo"
               className="h-10 w-auto object-contain"
-            />
+            /></a>
           </div>
 
           <div className="hidden md:flex space-x-8">
-            <a href="#" className="hover:text-red-600">HOME</a>
-            <a href="#" className="hover:text-red-600">ABOUT</a>
+            <a href="/" className="hover:text-red-600">HOME</a>
+            <a href="/About" className="hover:text-red-600">ABOUT</a>
             <a href="#" className="hover:text-red-600">SERVICE</a>
             <a href="#" className="hover:text-red-600">BLOG</a>
             <a href="#" className="hover:text-red-600">PAGES</a>

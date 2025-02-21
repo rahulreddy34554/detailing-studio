@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
 
+
 export default function HeroSlider() {
   const slides = [
     {
@@ -86,7 +87,7 @@ const services = [
   { id: 3, title: "FLEET SERVICES", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", icon: "🚛" },
 ];
 
-function Services() {
+ export function Services() {
   return (
     <div className="bg-zinc-900 text-white py-10">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -112,7 +113,7 @@ function Services() {
 
 
 
- function WhyChooseUs() {
+  export function WhyChooseUs() {
   const features = [
     "CERTIFIED TECHNICIANS",
     "COMPREHENSIVE REPAIR SERVICES",
@@ -212,7 +213,7 @@ const testimonials = [
     location: "From Canada",
     quote:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form injected humour, or randomised.",
-    image: "https://cras-next-js.vercel.app/assets/img/testimaonial.png",
+      image: "https://cras-next-js.vercel.app/assets/img/testimaonial.png"
   },
   {
     id: 2,
@@ -224,7 +225,7 @@ const testimonials = [
   },
 ];
 
- function TestimonialSlider() {
+ export function TestimonialSlider() {
   return (
     <div className="bg-zinc-900 py-10 relative">
       <div className="container mx-auto px-4">
@@ -284,7 +285,7 @@ const testimonials = [
 }
 
 
-function TeamSection() {
+ export function TeamSection() {
     const teamMembers = [
       {
         name: 'Michael Jack',
