@@ -4,9 +4,14 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     remotePatterns: [
+     
       {
         protocol: 'https',
-        hostname: 'cras-next-js.vercel.app',
+        hostname: '**', // This allows all HTTPS image sources
+      },
+      {
+        protocol: 'http',
+        hostname: '**', // This allows all HTTP image sources (optional)
       },
     ],
   },
