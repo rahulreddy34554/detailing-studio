@@ -80,7 +80,7 @@ export default function Navbar() {
             </div>
             <a href="#" className="hover:text-red-600">BLOG</a>
             <a href="#" className="hover:text-red-600">PAGES</a>
-            <a href="#" className="hover:text-red-600">CONTACT</a>
+            <a href="/contact" className="hover:text-red-600">CONTACT</a>
           </div>
 
           <div className="md:hidden">
