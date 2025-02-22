@@ -1,6 +1,7 @@
 // app/components/HeroSection.jsx
 
-import { WhyChooseUs } from '@/components/HeroSlider';
+
+import ServiceCards from '@/components/ServiceCards';
 import Image from 'next/image';
 
 export default function HeroSection() {
@@ -38,7 +39,8 @@ export default function HeroSection() {
           </p>
         </div>
       </div>
-      <WhyChooseCarWraps/>
+     <WhyChooseCarWraps/>
+     <ServiceCards/>
     </div>
   );
 } 
@@ -48,7 +50,7 @@ export default function HeroSection() {
 
 
 
-export function WhyChooseCarWraps() {
+ function WhyChooseCarWraps() {
   return (
     <>
     <div className="grid grid-cols-1 md:grid-cols-2  gap-8 items-center py-12 px-6 bg-black text-white">
@@ -116,7 +118,7 @@ export function WhyChooseCarWraps() {
        </p>
      </div>
    </div>
-   <ServiceCards/>
+  
    </>
   );
 }
@@ -132,34 +134,3 @@ const services = [
   
 ];
 
-export  function ServiceCards() {
-  return (
-    <div className="w-full bg-black py-10">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-3 gap-0">
-          {services.map((service, index) => (
-            <div key={index} className="relative">
-              <Image
-                src={service.image}
-                alt={service.title}
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center">
-                <Image
-                  src={service.icon}
-                  alt={`${service.title} Icon`}
-                  width={50}
-                  height={50}
-                  className="mb-2"
-                />
-                <h3 className="text-white text-lg font-bold">{service.title}</h3>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}

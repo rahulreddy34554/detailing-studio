@@ -1,7 +1,8 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { ServiceCards } from '../Car-Wrapping/page';
+import ServiceCards from '@/components/ServiceCards';
+
 
 const Page = () => {
   return (
