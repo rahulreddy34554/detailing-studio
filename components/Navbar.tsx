@@ -39,6 +39,7 @@ export default function Navbar() {
   const toggleServiceDropdown = () => {
     setServiceDropdown(!serviceDropdown);
   };
+ 
 
   return (
     <nav
@@ -127,7 +128,7 @@ export default function Navbar() {
 
             <a href="#" className="block hover:text-red-600">BLOG</a>
             <a href="#" className="block hover:text-red-600">PAGES</a>
-            <a href="#" className="block hover:text-red-600">CONTACT</a>
+            <a href="/contact" className="block hover:text-red-600">CONTACT</a>
           </div>
         )}
       </div>
