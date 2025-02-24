@@ -59,7 +59,7 @@ export default function Navbar() {
             </a>
           </div>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 text-white">
             <a href="/" className="hover:text-red-600">HOME</a>
             <a href="/About" className="hover:text-red-600">ABOUT</a>
             {/* Service with Dropdown */}
@@ -80,7 +80,7 @@ export default function Navbar() {
               )}
             </div>
             <a href="#" className="hover:text-red-600">BLOG</a>
-            <a href="#" className="hover:text-red-600">PAGES</a>
+            <a href="Gallery" className="hover:text-red-600">GALLERY</a>
             <a href="/contact" className="hover:text-red-600">CONTACT</a>
           </div>
 

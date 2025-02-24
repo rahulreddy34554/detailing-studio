@@ -71,8 +71,11 @@ export default function HeroSlider() {
     </Swiper>
     <Services/>
     <WhyChooseUs/>
+    <AutomotivePerfection/>
+    <DetailingServices/>
     <TestimonialSlider/>
     <TeamSection/>
+   
     </>
    
   );
@@ -345,3 +348,100 @@ const testimonials = [
     );
   }
   
+
+  export  function AutomotivePerfection() {
+    return (
+        <div className="relative flex flex-col md:flex-row items-center bg-white min-h-screen p-6">
+            {/* Left Image Section with Triangle Cut */}
+            <div className="relative w-full md:w-1/2">
+                <div className="relative overflow-hidden">
+                    {/* Orange Border */}
+                    <div className="absolute inset-0 clip-diamond border-4 border-orange-500 z-10"></div>
+                    
+                    {/* Image with Triangle Cut */}
+                    <img 
+                        src="https://wrapstylesydney.com.au/wp-content/uploads/2024/07/1718035222-2314-Audi-S6-John-Olsson-Wrap-Wrapstyle-01-768x432.webp" 
+                        alt="Saboo Detailing Studio" 
+                        className="w-full h-full object-cover clip-diamond"
+                    />
+                </div>
+            </div>
+
+            {/* Right Content Section */}
+            <div className="w-full md:w-1/2 p-6 md:pl-12">
+                <h1 className="text-4xl font-bold">
+                    DISCOVER THE ART OF <br />
+                    <span className="text-orange-500">AUTOMOTIVE PERFECTION</span>
+                </h1>
+                <p className="mt-4 text-gray-700">
+                    At Saboo Detailing Studio, we're more than just a detailing service;
+                    we're automotive artisans dedicated to elevating your driving experience.
+                    Our team of skilled technicians is driven by a passion for perfection,
+                    ensuring every vehicle that enters our studio receives meticulous attention
+                    and care. With years of expertise, we have become a trusted name in the
+                    automotive detailing industry.
+                </p>
+                <p className="mt-4 text-gray-700">
+                    As connoisseurs of precision and masters of automotive aesthetics,
+                    we welcome you to an immersive experience where your vehicle transforms
+                    into a work of art. Our commitment to excellence defines us, and your
+                    journey with us begins here.
+                </p>
+            </div>
+        </div>
+    );
+}
+
+
+export  function DetailingServices() {
+  const services = [
+      {
+          title: "CERAMIC COATING",
+          description: "We apply cutting-edge formulas that create an invisible shield, guarding your vehicle's paint against UV rays, contaminants, and the ravages of time.",
+          benefit: "Enhanced gloss, water repellency, and long-lasting protection.",
+          image: "https://imgs.search.brave.com/buYS8_dcexjAt7WUKckgoFVGFMbOLG7pB6R4kdqFgyM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA2LzIxLzQ1LzQx/LzM2MF9GXzYyMTQ1/NDEzM19MNEhGSlZq/azZjbEl4S3BuU2c0/R1JxRmh3RDM2UEky/OS5qcGc"
+      },
+      {
+          title: "PPF (PAINT PROTECTION FILMS)",
+          description: "Shield your car's paint from the elements with our premium PPF solutions. Virtually invisible, PPF provides robust defense against stone chips, bug splatter, and road debris.",
+          benefit: "Ultimate protection without compromising your vehicle's aesthetics.",
+          image: "https://wrapstylesydney.com.au/wp-content/uploads/2024/07/1716642496-2295-Volvo-XC40-Matte-Paint-Protection-Wrapstyle-jpeg.webp"
+      },
+      {
+          title: "WRAPPING",
+          description: "Unleash your creativity with our professional wrapping services. Choose from a spectrum of colors and finishes to give your vehicle a unique identity.",
+          benefit: "Personalized style, temporary or long-term transformations.",
+          image: "https://wrapstylesydney.com.au/wp-content/uploads/2024/07/1716635679-2290-Dodge-Challener-Punisher-Design-Wrapstyle-jpeg.webp"
+      }
+  ];
+
+  return (
+      <div className="bg-black text-white py-10">
+          <div className="container mx-auto px-4">
+              <h2 className="text-4xl font-bold text-orange-500 mb-2">UNMATCHED</h2>
+              <h3 className="text-4xl font-bold mb-10">DETAILING SERVICES</h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {services.map((service, index) => (
+                      <div key={index} className="relative group">
+                          <div className="overflow-hidden rounded-lg border-4 border-orange-500">
+                              <img 
+                                  src={service.image} 
+                                  alt={service.title} 
+                                  className="w-full h-60 object-cover transform group-hover:scale-105 transition duration-500"
+                              />
+                          </div>
+                          <h4 className="text-xl font-bold text-orange-500 mt-4">{service.title}</h4>
+                          <p className="text-gray-300 mt-2">{service.description}</p>
+                          <div className="mt-4 p-2 border border-orange-500 text-white inline-block">
+                              {service.benefit}
+                          </div>
+                      </div>
+                  ))}
+              </div>
+          </div>
+      </div>
+  );
+}
+
+

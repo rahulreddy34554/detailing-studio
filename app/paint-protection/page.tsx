@@ -50,17 +50,17 @@ export default Page;
 
 const PPFSection = () => {
   return (
-    <div className="w-full bg-white py-10 px-4">
+    <div className="w-full bg-black  py-10 px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
         {/* Left Content Section */}
         <div>
-          <h2 className="text-4xl font-bold text-black mb-6">EXPLORE OUR PPF SOLUTIONS</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">EXPLORE OUR PPF SOLUTIONS</h2>
+          <p className="text-lg text-gray-300 leading-relaxed mb-6">
             We use top-quality films from brands like <strong>SunTek</strong>, <strong>3M</strong>, and <strong>XPEL</strong> for our <strong>PPF car paint protection services</strong>.
             These options include:
           </p>
 
-          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-lg text-grey-400 space-y-2">
             <li>
               <strong>PPF Car Film:</strong> A durable, high-gloss layer that guards against scratches, dirt, and weather elements.
             </li>
@@ -69,11 +69,11 @@ const PPFSection = () => {
             </li>
           </ul>
 
-          <h3 className="text-xl font-semibold text-black mt-8 mb-4">
+          <h3 className="text-xl font-semibold text-white mt-8 mb-4">
             Why Choose WrapStyle Sydney for your car Paint Protection Film installation?
           </h3>
 
-          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-lg text-gray-300 space-y-2">
             <li>
               We offer excellent customer service and personalized <strong>ppf ppf solutions</strong> for all vehicles. Our services include <strong>matte auto PPF</strong> for a sleek look and paint protection.
             </li>
@@ -109,52 +109,49 @@ const PPFSection = () => {
 
         {/* Right Content Section */}
         <div>
-          <h2 className="text-4xl font-bold text-black mb-6">PROTECT YOUR CAR PAINT WITH WRAPSTYLE SYDNEY</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">PROTECT YOUR CAR PAINT WITH WRAPSTYLE SYDNEY</h2>
+          <p className="text-lg text-gray-300 leading-relaxed mb-6">
             Ready to protect your vehicle’s high gloss painted surface against bird droppings, road debris, bug splatters, acid rain, wear and tear with <strong>PPF wrap</strong>.
             Contact us for top-notch <strong>paint protection service in Sydney</strong>. If you’re looking for <strong>PPF near you</strong> or need <strong>car paint protection</strong>,
             we can help you choose the best option for your vehicle.
           </p>
 
-          <h3 className="text-xl font-semibold text-black mb-4">PPF Car Protection: The Best Solution</h3>
-          <p className="text-lg text-gray-700 mb-4">
+          <h3 className="text-xl font-semibold text-white mb-4">PPF Car Protection: The Best Solution</h3>
+          <p className="text-lg text-gray-300 mb-4">
             No better product to protect your car from stone chips and scratches than applying <strong>PPF car film</strong>.
             <strong> Car paint protection films</strong> provide robust defense against stones and debris.
           </p>
 
-          <h3 className="text-xl font-semibold text-black mb-4">Benefits of PPF Car Film</h3>
-          <p className="text-lg text-gray-700">
+          <h3 className="text-xl font-semibold text-white mb-4">Benefits of PPF Car Film</h3>
+          <p className="text-lg text-gray-300">
             <strong>Protective films</strong> can protect your car’s paint from scratches and chips caused by rocks or gravel while driving. When used correctly, the top coat film can fix minor scratches or dings.
           </p>
         </div>
       </div>
 
-      <div className="bg-white py-10 px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
-
-
-
-        {/*third-content*/}
+     {/*third-content*/}
         {/* Left Content Section */}
+      <div className="bg-black py-10 px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
         <div>
-          <h2 className="text-4xl font-bold text-black mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             SELF-HEALING PROPERTIES OF PPF
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <p className="text-lg text-gray-300 leading-relaxed mb-6">
             Because of its self-repairing capabilities, this damage vanishes in a matter of minutes.
           </p>
 
-          <h3 className="text-xl font-semibold text-black mb-2">
+          <h3 className="text-xl font-semibold text-white mb-2">
             Importance of Skilled PPF Installation
           </h3>
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg text-gray-300 mb-6">
             Expert <strong>PPF</strong> technicians <strong>wrap the film</strong> around each panel of your vehicle for a seamless look and better protection.
           </p>
 
-          <h3 className="text-xl font-semibold text-black mb-2">
+          <h3 className="text-xl font-semibold text-white mb-2">
             Advantages of Paint Protection Film
           </h3>
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-gray-300">
             <strong>Paint protection film</strong> shields your car from scratches, rock chips, stains, rust, chemicals, bugs, and debris on the road.
             High-quality <strong>PPF</strong>, such as <strong>SunTek PPF</strong>, <strong>3M PPF</strong>, and <strong>XPEL PPF</strong>, can even heal minor scratches when exposed to heat.
           </p>
@@ -174,7 +171,7 @@ const PPFSection = () => {
     </div>
 
     {/*FOURTH SECTION*/}
-    <div className="bg-white py-10 px-4">
+    <div className="bg-black py-10 px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
         {/* Left Image Section */}
         <div className="relative w-full h-[500px]">
@@ -189,25 +186,25 @@ const PPFSection = () => {
 
         {/* Right Content Section */}
         <div>
-          <h2 className="text-4xl font-bold text-black mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             BENEFITS OF PPF CAR FILM
           </h2>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <p className="text-lg text-gray-300 leading-relaxed mb-6">
             <strong>Applying car PPF film</strong> to high-risk areas like the front bumper, hood, fenders, and mirrors ensures your car stays in pristine condition. Our <strong>automobile PPF</strong> materials are strong and almost invisible, providing robust protection against impacts from stones and debris.
           </p>
 
-          <h3 className="text-xl font-semibold text-black mb-2">
+          <h3 className="text-xl font-semibold text-white mb-2">
             Self-Healing and UV Protection
           </h3>
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg text-gray-300 mb-6">
             Our <strong>highly recommended clear film</strong> protects your car’s paint from scratches and UV rays, preventing damage to the clear coat. Protective car wrap can also self-heal minor scratches when heated.
           </p>
 
-          <h3 className="text-xl font-semibold text-black mb-2">
+          <h3 className="text-xl font-semibold text-white mb-2">
             Find Paint Protection Film Near Me
           </h3>
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-gray-300">
             We offer solutions for <strong>PPF in Australia</strong>, such as <strong>3M Scotchgard paint protection film</strong> and top brands like <strong>XPEL</strong>, <strong>3M</strong>, <strong>AVERY PPF</strong>, and <strong>HEXIS Bodyfence paint protection film</strong>.
           </p>
         </div>
