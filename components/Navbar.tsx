@@ -9,7 +9,20 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [serviceDropdown, setServiceDropdown] = useState(false);
   const [showPopup, setShowPopup] = useState(true);
-  const [formData, setFormData] = useState({ name: '', phone: '', model: '', outlet: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', service: '' });
+
+  // Manage scroll lock when popup is visible
+  useEffect(() => {
+    if (showPopup) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [showPopup]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,11 +46,16 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   const toggleServiceDropdown = () => setServiceDropdown(!serviceDropdown);
-  const closePopup = () => setShowPopup(false);
+  const closePopup = () => {
+    setShowPopup(false);
+    document.body.classList.remove('overflow-hidden');
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(formData);
@@ -57,13 +75,13 @@ export default function Navbar() {
               />
               <button
                 onClick={closePopup}
-                className="absolute top-3 right-3 text-red-500 hover:text-red-700"
+                className="absolute top-3 right-3 text-white border rounded-full p-1 bg-red-700 hover:text-red-950"
               >
                 <X size={24} />
               </button>
             </div>
 
-            <form onSubmit={handleSubmit} className="p-6 space-y-4 ">
+            <form onSubmit={handleSubmit} className="p-6 space-y-4">
               <h2 className="text-xl font-semibold text-center">Book Your Appointment</h2>
 
               <div>
@@ -93,33 +111,18 @@ export default function Navbar() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium">Model</label>
+                <label className="block text-sm font-medium">Service</label>
                 <select
-                  name="model"
-                  value={formData.model}
+                  name="service"
+                  value={formData.service}
                   onChange={handleChange}
                   className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring focus:ring-red-500 text-black"
                   required
                 >
-                  <option value="">Select Model</option>
-                  <option value="Dzire">Dzire</option>
-                  <option value="Swift">Swift</option>
-                  <option value="Baleno">Baleno</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium">Outlet</label>
-                <select
-                  name="outlet"
-                  value={formData.outlet}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring focus:ring-red-500 text-black"
-                  required
-                >
-                  <option value="">Select Outlet</option>
-                  <option value="Hyderabad">Hyderabad</option>
-                  <option value="Bangalore">Bangalore</option>
+                  <option value="">Select Service</option>
+                  <option value="PPF">PPF</option>
+                  <option value="Ceramic-Coating">Ceramic Coating</option>
+                  <option value="Wrapping">Wrapping</option>
                 </select>
               </div>
 
@@ -142,9 +145,9 @@ export default function Navbar() {
       )}
 
       <nav
-        className={`fixed w-full transition-transform duration-300 z-50
-          ${visible ? 'translate-y-0' : '-translate-y-full'}
-          backdrop-blur-lg border-b border-gray-200/30`}
+        className={`fixed w-full transition-transform duration-300 z-50 ${
+          visible ? 'translate-y-0' : '-translate-y-full'
+        } backdrop-blur-lg border-b border-gray-200/30`}
       >
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
