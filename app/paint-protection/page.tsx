@@ -6,7 +6,9 @@ import ServiceCards from '@/components/ServiceCards';
 
 const Page = () => {
   return (
-    <div className="relative w-full min-h-screen flex flex-col">
+    <div className="relative w-full min-h-screen flex flex-col p-14">
+      <PPFSection1/>
+      <DefenseSection/>
       {/* Background Image */}
       <div className="relative w-full h-[80vh]">
         <Image
@@ -216,5 +218,111 @@ const PPFSection = () => {
     </div>
   );
 };
+
+
+const  PPFSection1 = () => {
+    const features = [
+        { icon: "/icons/hydrophobic.png", title: "HYDROPHOBIC" },
+        { icon: "/icons/self-healing.png", title: "SELF HEALING" },
+        { icon: "/icons/non-yellowing.png", title: "NON YELLOWING" },
+        { icon: "/icons/stretchability.png", title: "HIGH STRETCHABILITY" },
+        { icon: "/icons/uv-blocking.png", title: "100% UV BLOCKING" },
+        { icon: "/icons/impact-resistant.png", title: "IMPACT RESISTANT" },
+    ];
+
+    return (
+        <div className="bg-black text-white py-16 px-8">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                {/* Left Side - Features */}
+                <div>
+                    <h1 className="text-5xl font-bold">
+                        PPF <span className="text-orange-500">(PAINT PROTECTION FILM)</span>
+                    </h1>
+                    <div className="mt-8 grid grid-cols-2 gap-6">
+                        {features.map((feature, index) => (
+                            <div key={index} className="flex items-center gap-4">
+                                <Image
+                                    src={feature.icon}
+                                    alt={feature.title}
+                                    width={40}
+                                    height={40}
+                                    className="w-10 h-10"
+                                />
+                                <span className="text-lg font-semibold">{feature.title}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Right Side - Car Image */}
+                <div className="flex justify-center">
+                    <Image
+                        src="https://wrapstylesydney.com.au/wp-content/uploads/2024/07/1716642496-2295-Volvo-XC40-Matte-Paint-Protection-Wrapstyle-jpeg.webp"
+                        alt="PPF Car Protection"
+                        width={800}
+                        height={500}
+                        className="w-full h-auto"
+                    />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+
+
+
+const DefenseSection = () => {
+    return (
+        <div className="bg-white py-16 px-8">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                
+                {/* Left Side - Image with Triangle Border */}
+                <div className="relative">
+                    <div className="relative">
+                        <Image
+                            src="https://wrapstylesydney.com.au/wp-content/uploads/2024/07/1716642496-2295-Volvo-XC40-Matte-Paint-Protection-Wrapstyle-jpeg.webp"
+                            alt="PPF Defense"
+                            width={600}
+                            height={400}
+                            className="w-full h-auto rounded-lg border-[10px] border-transparent"
+                        />
+                        <div className="absolute inset-0 border-[10px] border-black clip-triangle"></div>
+                    </div>
+                </div>
+
+                {/* Right Side - Content */}
+                <div>
+                    <h1 className="text-5xl font-bold">
+                        UNMATCHED DEFENSE,<br />
+                        <span className="text-orange-500">INVISIBLE SHIELD</span>
+                    </h1>
+
+                    <div className="mt-8 space-y-6">
+                        <div>
+                            <h2 className="text-xl font-bold text-orange-500">WHAT IS PPF?</h2>
+                            <p className="text-gray-700 mt-2">
+                                Paint Protection Film is a transparent, thermoplastic urethane film
+                                that acts as an invisible shield, safeguarding your vehicle's paint from
+                                stone chips, road debris, bug splatter, and other environmental hazards.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 className="text-xl font-bold text-orange-500">HOW PPF WORKS</h2>
+                            <p className="text-gray-700 mt-2">
+                                Imagine PPF as a guardian for your car, akin to a sophisticated scratch
+                                guard. PPF leverages cutting-edge technology to absorb and disperse impact energy,
+                                acting as a formidable shield against stone chips and scratches. It acts as a sacrificial
+                                layer, leaving your factory paint untouched while maintaining your vehicle's elegance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 
 

@@ -73,8 +73,9 @@ export default function HeroSlider() {
     <WhyChooseUs/>
     <AutomotivePerfection/>
     <DetailingServices/>
+    <SabooAdvantage/>
     <TestimonialSlider/>
-    <TeamSection/>
+    {/* <TeamSection/> */}
    
     </>
    
@@ -173,7 +174,7 @@ const services = [
           </div>
 
           {/* View More Button */}
-          <motion.button
+          {/* <motion.button
             initial={{ opacity: 0}}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.5 }}
@@ -181,7 +182,7 @@ const services = [
             className="bg-red-700 hover:bg-red-800 text-white py-3 px-6 font-bold rounded"
           >
             VIEW MORE
-          </motion.button>
+          </motion.button> */}
         </div>
 
         {/* Right Image */}
@@ -444,4 +445,73 @@ export  function DetailingServices() {
   );
 }
 
+
+ function SabooAdvantage() {
+    const features = [
+        {
+            title: "EXPERTISE BEYOND COMPARE",
+            description:
+                "Our technicians are not just skilled; they're automotive enthusiasts trained in the latest detailing techniques. We bring a wealth of experience to every project.",
+            icon: "https://img.freepik.com/free-vector/person-working-support_1212-37.jpg?semt=ais_hybrid",
+        },
+        {
+            title: "QUALITY PRODUCTS",
+            description:
+                "We use only the finest ceramic coatings, PPF, and wrapping materials available in the market. Our commitment to quality ensures that your vehicle gets the best treatment.",
+            icon: "/icons/quality.svg",
+        },
+        {
+            title: "TAILORED SOLUTIONS",
+            description:
+                "Your vehicle is unique, and so are your preferences. Our customization options allow you to tailor our services to meet your specific needs, ensuring a bespoke touch for every client.",
+            icon: "/icons/solutions.svg",
+        },
+        {
+            title: "STATE-OF-THE-ART FACILITY",
+            description:
+                "Immerse your vehicle in the care it deserves within our state-of-the-art facility, equipped with advanced tools and technology to elevate the detailing experience, we utilize cutting-edge methods for superior results.",
+            icon: "/icons/facility.svg",
+        },
+        {
+            title: "DEDICATED CUSTOMER SUPPORT",
+            description:
+                "Enjoy a seamless customer experience with our dedicated support team. We're here to address your queries, guide you through our services, and ensure your complete satisfaction.",
+            icon: "https://img.freepik.com/free-vector/person-working-support_1212-37.jpg?semt=ais_hybrid",
+        },
+    ];
+
+    return (
+        <div className="bg-white py-10 px-4 md:px-10">
+            <div className="text-center mb-10">
+                <h1 className="text-4xl font-bold">
+                    THE SABOO <span className="text-orange-500">ADVANTAGE</span>
+                </h1>
+                <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
+                    Choose Saboo Detailing Studio for a transformative automotive experience — where craftsmanship, innovation, and customer-centricity converge to redefine excellence in every detail.
+                </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                {features.map((feature, index) => (
+                    <div key={index} className="bg-gray-100 p-6 rounded-lg text-center">
+                        <div className="flex justify-center mb-4">
+                            <Image
+                                src={feature.icon}
+                                alt={feature.title}
+                                width={60}
+                                height={60}
+                            />
+                        </div>
+                        <h2 className="text-xl font-semibold text-orange-500">
+                            {feature.title}
+                        </h2>
+                        <p className="mt-2 text-gray-600 text-sm">
+                            {feature.description}
+                        </p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
 

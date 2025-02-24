@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { FaShieldHalved } from "react-icons/fa6"
+
 
 
 
@@ -12,7 +12,7 @@ const page = () => {
         <ScienceBehindBrilliance/>
         <CeramicProtection/>
         <PreservationSection/>
-        <Pricing/>
+        {/* <Pricing/> */}
         <PackageOptions/>
     </div>
   )
@@ -183,101 +183,101 @@ const ApplicationProcess = () => {
 
 
 
-const Pricing = () => {
-    const models = [
-        { model: "CELERIO", price: "25,000" },
-        { model: "S-PRESSO", price: "25,000" },
-        { model: "SWIFT", price: "25,000" },
-        { model: "ALTO", price: "25,000" },
-        { model: "ALTO K10", price: "25,000" },
-        { model: "WAGONR", price: "25,000" },
-        { model: "EECO", price: "30,000" },
-        { model: "DZIRE", price: "35,000" },
-        { model: "ERTIGA", price: "35,000" },
-        { model: "BREZZA", price: "35,000" }
-    ];
+// const Pricing = () => {
+//     const models = [
+//         { model: "CELERIO", price: "25,000" },
+//         { model: "S-PRESSO", price: "25,000" },
+//         { model: "SWIFT", price: "25,000" },
+//         { model: "ALTO", price: "25,000" },
+//         { model: "ALTO K10", price: "25,000" },
+//         { model: "WAGONR", price: "25,000" },
+//         { model: "EECO", price: "30,000" },
+//         { model: "DZIRE", price: "35,000" },
+//         { model: "ERTIGA", price: "35,000" },
+//         { model: "BREZZA", price: "35,000" }
+//     ];
 
-    const packages = [
-        {
-            name: "BRONZE",
-            features: [
-                "1 Layer of Ceramic Pro 9H",
-                "1 Layer of Ceramic Pro Top Coat",
-                "1 Layer of Ceramic Pro Glass (front glass)",
-                "Micro Fiber Towel - 2 Nos.",
-                "First Ceramic Pro Foam Wash",
-                "1 Year Warranty"
-            ],
-            prices: ["25,000", "25,000", "25,000", "25,000", "25,000", "25,000", "30,000", "35,000", "35,000"]
-        },
-        {
-            name: "SILVER",
-            features: [
-                "2 Layers of Ceramic Pro 9H",
-                "1 Layer of Ceramic Pro Top Coat",
-                "1 Layer of Ceramic Pro Glass (front & back)",
-                "1 Layer of Ceramic Pro Plastic (exterior)",
-                "1 Layer of Wheel",
-                "Micro Fiber Towel - 2 Nos.",
-                "First Ceramic Pro Foam Wash",
-                "2 Years Warranty"
-            ],
-            prices: ["35,000", "35,000", "35,000", "35,000", "35,000", "35,000", "40,000", "45,000", "45,000"]
-        },
-        {
-            name: "GOLD",
-            features: [
-                "3 Layers of Ceramic Pro 9H",
-                "1 Layer of Ceramic Pro Top Coat",
-                "1 Layer of Ceramic Pro Glass (all glasses)",
-                "2 Layers of Ceramic Pro Plastic (exterior)",
-                "2 Layers of Wheel",
-                "Micro Fiber Towel - 2 Nos.",
-                "First Ceramic Pro Foam Wash",
-                "5 Years Warranty"
-            ],
-            prices: ["45,000", "45,000", "45,000", "45,000", "45,000", "45,000", "55,000", "60,000", "60,000"]
-        }
-    ];
+//     const packages = [
+//         {
+//             name: "BRONZE",
+//             features: [
+//                 "1 Layer of Ceramic Pro 9H",
+//                 "1 Layer of Ceramic Pro Top Coat",
+//                 "1 Layer of Ceramic Pro Glass (front glass)",
+//                 "Micro Fiber Towel - 2 Nos.",
+//                 "First Ceramic Pro Foam Wash",
+//                 "1 Year Warranty"
+//             ],
+//             prices: ["25,000", "25,000", "25,000", "25,000", "25,000", "25,000", "30,000", "35,000", "35,000"]
+//         },
+//         {
+//             name: "SILVER",
+//             features: [
+//                 "2 Layers of Ceramic Pro 9H",
+//                 "1 Layer of Ceramic Pro Top Coat",
+//                 "1 Layer of Ceramic Pro Glass (front & back)",
+//                 "1 Layer of Ceramic Pro Plastic (exterior)",
+//                 "1 Layer of Wheel",
+//                 "Micro Fiber Towel - 2 Nos.",
+//                 "First Ceramic Pro Foam Wash",
+//                 "2 Years Warranty"
+//             ],
+//             prices: ["35,000", "35,000", "35,000", "35,000", "35,000", "35,000", "40,000", "45,000", "45,000"]
+//         },
+//         {
+//             name: "GOLD",
+//             features: [
+//                 "3 Layers of Ceramic Pro 9H",
+//                 "1 Layer of Ceramic Pro Top Coat",
+//                 "1 Layer of Ceramic Pro Glass (all glasses)",
+//                 "2 Layers of Ceramic Pro Plastic (exterior)",
+//                 "2 Layers of Wheel",
+//                 "Micro Fiber Towel - 2 Nos.",
+//                 "First Ceramic Pro Foam Wash",
+//                 "5 Years Warranty"
+//             ],
+//             prices: ["45,000", "45,000", "45,000", "45,000", "45,000", "45,000", "55,000", "60,000", "60,000"]
+//         }
+//     ];
 
-    return (
-        <div className="bg-black text-white py-12 px-4 md:px-16">
-            <h1 className="text-4xl font-bold text-center">
-                UNMATCHED PROTECTION, <span className="text-orange-500">UNBEATABLE VALUE</span>
-            </h1>
-            <p className="text-center mt-4">
-                At Saboo Detailing Studio, we understand that each vehicle is unique, and so are the needs of our clients. Explore our meticulously crafted packages, designed to enhance and protect your investment with the brilliance of Ceramic Coating.
-            </p>
+//     return (
+//         <div className="bg-black text-white py-12 px-4 md:px-16">
+//             <h1 className="text-4xl font-bold text-center">
+//                 UNMATCHED PROTECTION, <span className="text-orange-500">UNBEATABLE VALUE</span>
+//             </h1>
+//             <p className="text-center mt-4">
+//                 At Saboo Detailing Studio, we understand that each vehicle is unique, and so are the needs of our clients. Explore our meticulously crafted packages, designed to enhance and protect your investment with the brilliance of Ceramic Coating.
+//             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
-                {/* Car Models */}
-                <div className="border border-orange-500 p-4">
-                    <h2 className="text-xl font-bold mb-4">MODEL</h2>
-                    {models.map((car, index) => (
-                        <div key={index} className="border-b border-gray-600 py-2">
-                            <span>{car.model}</span>
-                        </div>
-                    ))}
-                </div>
+//             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
+//                 {/* Car Models */}
+//                 <div className="border border-orange-500 p-4">
+//                     <h2 className="text-xl font-bold mb-4">MODEL</h2>
+//                     {models.map((car, index) => (
+//                         <div key={index} className="border-b border-gray-600 py-2">
+//                             <span>{car.model}</span>
+//                         </div>
+//                     ))}
+//                 </div>
 
                
 
-                {/* Packages */}
-                {packages.map((pkg, index) => (
-                    <div key={index} className="border border-orange-500 p-4">
-                        <h2 className="text-2xl font-bold text-orange-500">{pkg.name}</h2>
-                        {pkg.features.map((feature, i) => (
-                            <div key={i} className="flex justify-between border-b border-gray-600 py-1">
-                                <span>{feature}</span>
-                                <span className="font-semibold">₹{pkg.prices[i]}</span>
-                            </div>
-                        ))}
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-};
+//                 {/* Packages */}
+//                 {packages.map((pkg, index) => (
+//                     <div key={index} className="border border-orange-500 p-4">
+//                         <h2 className="text-2xl font-bold text-orange-500">{pkg.name}</h2>
+//                         {pkg.features.map((feature, i) => (
+//                             <div key={i} className="flex justify-between border-b border-gray-600 py-1">
+//                                 <span>{feature}</span>
+//                                 <span className="font-semibold">₹{pkg.prices[i]}</span>
+//                             </div>
+//                         ))}
+//                     </div>
+//                 ))}
+//             </div>
+//         </div>
+//     );
+// };
 
 
 
@@ -337,10 +337,6 @@ const CeramicProtection = () => {
         </div>
     );
 };
-
-
-
-
 
 
 
