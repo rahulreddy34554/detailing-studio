@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { ImLocation2 } from "react-icons/im";
+import { IoLogoWhatsapp } from "react-icons/io5";
+import { SiGmail } from "react-icons/si";
+import { MdCall } from "react-icons/md";
+
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -157,19 +163,19 @@ export default function ContactPage() {
           </p>
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
-              <span>📞</span>
-              <p>Phone Number: 9848898488</p>
+              <span><MdCall className="h-5 w-5 text-blue-800" /></span>
+              <p>Phone Number: 9848866181</p>
             </div>
             <div className="flex items-center space-x-4">
-              <span>📧</span>
-              <p>Email Address: example@email.com</p>
+              <span><SiGmail className="h-5 w-5 text-red-600" /></span>
+              <p>Email Address: saboodetailingstudio@gmail.com</p>
             </div>
             <div className="flex items-center space-x-4">
-              <span>💬</span>
-              <p>WhatsApp: 9848898488</p>
+              <span><IoLogoWhatsapp className="text-green-500 h-5 w-5" /></span>
+              <p>WhatsApp: 9848866181</p>
             </div>
             <div className="flex items-center space-x-4">
-              <span>📍</span>
+              <span><ImLocation2  className="h-5 w-5 text-red-500"/></span>
               <p>Our Office: Saboo Detailing Studio</p>
             </div>
             <div>

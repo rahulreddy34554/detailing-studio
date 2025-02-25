@@ -63,7 +63,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">
             <img 
-              src="https://saboodetailingstudio.com/logo.png" 
+              src="/SDS_Logo.png" 
               alt="Sabo Detailing Studio Logo"
               className="h-20 w-auto object-contain"
             />
@@ -108,9 +108,9 @@ export default function Footer() {
               <li>📅 Sun -: Open 24/7</li>
             </ul>
             <div className=" flex space-x-6 mt-4 text-2xl">
-              <a><p className="hover:text-blue-600"><FaFacebook /></p></a>
-              <a href="/" className="hover:text-red-600"><FaInstagram /></a>
-              <a href="#" className="hover:text-gray-700"><BsTwitterX /></a>
+              <a href="https://www.facebook.com/saboodetailingstudio/"><p className="hover:text-blue-600 text-blue-600  animate-pulse"><FaFacebook /></p></a>
+              <a href="https://www.instagram.com/saboodetailingstudio/" className="hover:text-red-600 text-red-600 animate-pulse"> <FaInstagram /></a>
+              <a href="#" className="hover:text-gray-700 animate-pulse"><BsTwitterX /></a>
 
             </div>
           </div>

@@ -18,7 +18,7 @@ export default function HeroSlider() {
   const slides = [
     {
       id: 1,
-      image: "https://i.pinimg.com/474x/1b/68/71/1b6871741fb97994d076df4520dd3750.jpg", // Place the image in the public folder
+      image: "https://images.pexels.com/photos/3972755/pexels-photo-3972755.jpeg?auto=compress&cs=tinysrgb&w=800", // Place the image in the public folder
       title: "CAR REPAIR MAINTAINANCE",
       description:
         "Our skilled team of certified technician the proportion of a substance that is contained in a mixture or alloy etc.something (a person or object or scene) selected by an artist or photographer for graphic representation ",
@@ -203,7 +203,7 @@ export function WhyChooseUs() {
             viewport={{ once: true }}
             className="text-5xl font-extrabold mb-4 text-white"
           >
-            WHY CHOOSE <span className="text-gray-400">US</span>
+            WHY CHOOSE US<span className="text-gray-400"></span>
           </motion.h2>
 
           <motion.p
@@ -211,7 +211,7 @@ export function WhyChooseUs() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-gray-400 mb-8 leading-relaxed"
+            className="text-gray-300 mb-8 leading-relaxed"
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
             Ipsum has been the industry's standard dummy text ever since.
@@ -246,7 +246,7 @@ export function WhyChooseUs() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.5 }}
             viewport={{ once: true }}
-            className="bg-[#8A1C1C] hover:bg-red-800 text-white py-3 px-8 font-bold rounded"
+            className="bg-[#8A1C1C] hover:bg-white hover:text-red-600 text-white py-3 px-8 font-bold rounded"
           >
             VIEW MORE
           </motion.button></a>

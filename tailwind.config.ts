@@ -16,7 +16,9 @@ const config = {
       },
       animation: {
         wave: "wave-border 2s infinite ease-in-out",
+        pulse: "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite", 
       },
+      
       keyframes: {
         "wave-border": {
           "0%": { boxShadow: "0 0 0 0 rgba(255, 0, 0, 0.7)" },
