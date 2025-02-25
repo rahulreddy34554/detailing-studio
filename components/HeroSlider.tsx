@@ -240,7 +240,8 @@ export function WhyChooseUs() {
           </div>
 
           {/* View More Button */}
-          <motion.button
+         <a href="/About"> <motion.button
+          
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.5 }}
@@ -248,7 +249,7 @@ export function WhyChooseUs() {
             className="bg-[#8A1C1C] hover:bg-red-800 text-white py-3 px-8 font-bold rounded"
           >
             VIEW MORE
-          </motion.button>
+          </motion.button></a>
         </div>
 
         {/* Right Image */}
