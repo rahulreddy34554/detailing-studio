@@ -26,7 +26,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="w-full bg-zinc-500 py-12 px-4 sm:px-0">
+      {/* <div className="w-full bg-zinc-500 py-12 px-4 sm:px-0">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold text-gray-900">Premium Car Wraps in Sydney</h2>
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">
@@ -34,7 +34,7 @@ const Page = () => {
             <span className="font-bold"> high-quality car wraps </span> in Sydney.
           </p>
         </div>
-      </div>
+      </div> */}
 
       <PPFSection1 />
       <DefenseSection />

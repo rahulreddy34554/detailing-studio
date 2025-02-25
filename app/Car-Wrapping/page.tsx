@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function HeroSection() {
   return (
    
-    <div className="relative w-full min-h-screen flex flex-col">
+    <div className="relative w-full min-h-screen flex flex-col overflow-hidden">
       {/* Background Image */}
       <div className="relative w-full h-[80vh]">
         <Image
