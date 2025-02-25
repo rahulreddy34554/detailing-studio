@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { MdCall } from "react-icons/md";
 
 export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -98,8 +99,9 @@ export default function Navbar() {
           </div>
 
           {/* Phone Number */}
-          <div className="hidden md:flex items-center space-x-4">
-            <span>9848866181</span>
+          <div className="hidden md:flex items-center space-x-4 ">
+            <p className="bg-red-600 rounded-full p-2 animate-pulse"><MdCall  className="h-8 w-8"/></p>
+          <span> 9848866181</span>
           </div>
         </div>
 

@@ -1,6 +1,5 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+const config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,8 +12,18 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       backdropBlur: {
-        'lg': '16px',
-      }
+        lg: "16px",
+      },
+      animation: {
+        wave: "wave-border 2s infinite ease-in-out",
+      },
+      keyframes: {
+        "wave-border": {
+          "0%": { boxShadow: "0 0 0 0 rgba(255, 0, 0, 0.7)" },
+          "50%": { boxShadow: "0 0 10px 5px rgba(255, 0, 0, 0.5)" },
+          "100%": { boxShadow: "0 0 0 0 rgba(255, 0, 0, 0.7)" },
+        },
+      },
     },
   },
   plugins: [],

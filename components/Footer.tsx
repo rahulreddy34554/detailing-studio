@@ -1,6 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import { MdCall } from "react-icons/md";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -69,8 +73,9 @@ export default function Footer() {
               industry.
             </p>
             <div className="flex items-center mt-4">
-              <div className="bg-red-600 p-2 rounded-full mr-2">📞</div>
-              <p className="text-xl font-bold"> 9848898488</p>
+              <div className="bg-red-600 p-2 rounded-full mr-2 animate-pulse"><MdCall />
+              </div>
+              <p className="text-xl font-bold"> 9848866181</p>
             </div>
           </div>
 
@@ -102,16 +107,19 @@ export default function Footer() {
               <li>✉️ saboodetailingstudio@gmail.com</li>
               <li>📅 Sun -: Open 24/7</li>
             </ul>
+            <div className=" flex space-x-6 mt-4 text-2xl">
+              <a><p className="hover:text-blue-600"><FaFacebook /></p></a>
+              <a href="/" className="hover:text-red-600"><FaInstagram /></a>
+              <a href="#" className="hover:text-gray-700"><BsTwitterX /></a>
+
+            </div>
           </div>
         </div>
 
         <div className="mt-10 border-t border-red-700 pt-4 flex justify-between items-center">
           <p>Copyright 2025, All Rights Reserved</p>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-red-500">🔝</a>
-            <a href="#" className="hover:text-red-500">📷</a>
-            <a href="#" className="hover:text-red-500">📘</a>
-            <a href="#" className="hover:text-red-500">📸</a>
+          <div className="flex gap-1">
+          Powered by <a href="https://broaddcast.com/" className="hover:text-red-600">BroaddCast Business Solutions LLP.</a>
           </div>
         </div>
       </div>
