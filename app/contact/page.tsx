@@ -1,56 +1,159 @@
-// app/contact/page.jsx
+"use client";
 
-import Image from 'next/image';
+import { useState } from "react";
+import Image from "next/image";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    service: "",
+    message: "",
+  });
+
+  const [successMessage, setSuccessMessage] = useState<string>("");
+  const [errorMessage, setErrorMessage] = useState<string>("");
+
+  // Handle input changes
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Validate form inputs
+  const validateForm = () => {
+    const { email, number } = formData;
+
+    // Validate phone number (10 digits)
+    if (!/^\d{10}$/.test(number)) {
+      setErrorMessage("Phone number must be exactly 10 digits.");
+      return false;
+    }
+
+    // Validate email (@gmail.com)
+    if (!/^[\w.-]+@gmail\.com$/.test(email)) {
+      setErrorMessage("Email must be a valid @gmail.com address.");
+      return false;
+    }
+
+    setErrorMessage("");
+    return true;
+  };
+
+  // Handle form submission
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!validateForm()) return;
+
+    console.log("Form Submitted:", formData);
+    setSuccessMessage("Form submitted successfully!");
+
+    // Reset form after submission
+    setFormData({
+      name: "",
+      email: "",
+      number: "",
+      service: "",
+      message: "",
+    });
+
+    setTimeout(() => setSuccessMessage(""), 3000);
+  };
+
   return (
-    <div className="bg-black text-white min-h-screen">
-      {/* Header */}
+    <div className="bg-black text-white min-h-screen pt-20">
+      {/* Header Section */}
       <header className="text-center py-16">
         <h1 className="text-6xl font-extrabold">Contact Us</h1>
-        <p className="mt-2 text-lg text-gray-400"><span> <a href= "/">Home </a></span>/ Contact</p>
+        <p className="mt-2 text-lg text-gray-400">
+          <a href="/" className="hover:underline">Home</a> / Contact
+        </p>
       </header>
 
       {/* Main Content */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto px-6 py-12">
-        {/* Contact Form */}
+        {/* Contact Form Section */}
         <div className="bg-zinc-800 p-8 rounded-xl">
           <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
-          <form className="space-y-4">
+
+          {/* Success and Error Messages */}
+          {successMessage && (
+            <div className="mb-4 p-3 text-green-500 bg-green-100 rounded-lg">
+              {successMessage}
+            </div>
+          )}
+          {errorMessage && (
+            <div className="mb-4 p-3 text-red-500 bg-red-100 rounded-lg">
+              {errorMessage}
+            </div>
+          )}
+
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
-              placeholder="Your Name..."
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Name"
               className="w-full p-3 bg-zinc-700 rounded-lg focus:outline-none"
+              required
             />
             <input
               type="email"
-              placeholder="example@yourmail.com"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="example@gmail.com"
               className="w-full p-3 bg-zinc-700 rounded-lg focus:outline-none"
+              required
             />
             <input
               type="text"
-              placeholder="Title..."
+              name="number"
+              value={formData.number}
+              onChange={handleChange}
+              placeholder="10-digit Phone Number"
               className="w-full p-3 bg-zinc-700 rounded-lg focus:outline-none"
+              required
+              maxLength={10}
             />
+            <select
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              className="w-full px-4 py-2 rounded-lg text-white bg-zinc-700 focus:ring"
+              required
+            >
+              <option value="">Select Service</option>
+              <option value="PPF">PPF</option>
+              <option value="Ceramic-Coating">Ceramic Coating</option>
+              <option value="Wrapping">Wrapping</option>
+            </select>
             <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Type Here..."
               className="w-full p-3 bg-zinc-700 rounded-lg focus:outline-none"
-             
+              required
             ></textarea>
+
             <button
               type="submit"
-              className="w-full py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-300"
+              className="w-full py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-300 transition"
             >
               Send Now
             </button>
           </form>
         </div>
 
-        {/* Contact Info */}
+        {/* Contact Info Section */}
         <div>
           <p className="text-lg text-gray-400 mb-8">
-            In tempus nisi turpis, at ultricies dui eleifend a. Quisque et quam vel
-            nunc consectetur pharetra euismod et elit.
+            Have questions? Reach out to us, and we'll be happy to assist!
           </p>
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
@@ -67,7 +170,7 @@ export default function ContactPage() {
             </div>
             <div className="flex items-center space-x-4">
               <span>📍</span>
-              <p>Our Office: saboodetailingstudio</p>
+              <p>Our Office: Saboo Detailing Studio</p>
             </div>
             <div>
               <iframe
@@ -87,16 +190,13 @@ export default function ContactPage() {
         <Image
           src="https://wrapstylesydney.com.au/wp-content/themes/wrapstyle-sydney/assets/images/carousel/slide_3_v3.jpg"
           alt="We Are Always Ready"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg"
+          fill
+          className="rounded-lg object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center">
           <h2 className="text-4xl font-bold">We Are Always Ready To Take A Perfect Shot</h2>
         </div>
       </div>
-
-      
     </div>
   );
 }

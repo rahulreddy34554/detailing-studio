@@ -13,24 +13,24 @@ export default function HeroSlider() {
   const slides = [
     {
       id: 1,
-      image: "https://cras-next-js.vercel.app/assets/img/hero_slider_bg_1.png", // Place the image in the public folder
-      title: "AUTOMOTIVE REPAIR MAINTENANCE",
+      image: "https://wrapstylesydney.com.au/wp-content/themes/wrapstyle-sydney/assets/images/carousel/slide_1_v3.jpg", // Place the image in the public folder
+      title: "",
       description:
-        "Our skilled team of certified technicians is here to provide top-notch car repair and auto services to ensure your vehicle performs at its best.",
+        "",
     },
     {
         id: 2,
-        image: "https://cras-next-js.vercel.app/assets/img/hero_slider_bg_1.png", // Place the image in the public folder
-        title: "AUTOMOTIVE REPAIR MAINTENANCE",
+        image: "https://wrapstylesydney.com.au/wp-content/themes/wrapstyle-sydney/assets/images/carousel/slide_2_v3.jpg", // Place the image in the public folder
+        title: "",
         description:
-          "Our skilled team of certified technicians is here to provide top-notch car repair and auto services to ensure your vehicle performs at its best.",
+          "",
       },
       {
         id: 3,
-        image: "https://cras-next-js.vercel.app/assets/img/hero_slider_bg_1.png", // Place the image in the public folder
-        title: "AUTOMOTIVE REPAIR MAINTENANCE",
-        description:
-          "Our skilled team of certified technicians is here to provide top-notch car repair and auto services to ensure your vehicle performs at its best.",
+        image: "https://wrapstylesydney.com.au/wp-content/themes/wrapstyle-sydney/assets/images/carousel/slide_3_v3.jpg", // Place the image in the public folder
+      //  title: "AUTOMOTIVE REPAIR MAINTENANCE",
+       // description:
+       //   "Our skilled team of certified technicians is here to provide top-notch car repair and auto services to ensure your vehicle performs at its best.",
       },
   ];
   
@@ -60,9 +60,9 @@ export default function HeroSlider() {
                   {slide.title}
                 </h1>
                 <p className="text-lg mb-6">{slide.description}</p>
-                <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg">
+                {/* <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg">
                   APPOINTMENT
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
