@@ -36,9 +36,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full transition-transform duration-300 z-50 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      } backdrop-blur-lg border-b border-gray-200/30`}
+      className={`fixed w-full transition-transform duration-300 z-50 ${visible ? "translate-y-0" : "-translate-y-full"
+        } backdrop-blur-lg border-b border-gray-200/30`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
@@ -54,16 +53,27 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 text-white">
-            <a href="/" className="hover:text-red-600">
+            <a
+              href="/"
+              className="relative text-white font-medium text-lg tracking-wide transition-all duration-300 
+    hover:text-red-500 hover:scale-105 
+    before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-red-500 
+    before:transition-all before:duration-500 before:ease-in-out hover:before:w-full"
+            >
               HOME
             </a>
-            <a href="/About" className="hover:text-red-600">
+
+            <a href="/About" className="relative text-white font-semibold transition-colors duration-300 hover:text-red-600 
+    after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-0 after:bg-red-600 
+    after:transition-all after:duration-300 hover:after:w-full">
               ABOUT
             </a>
             <div className="relative">
               <button
                 onClick={toggleServiceDropdown}
-                className="flex items-center gap-1 hover:text-red-600"
+                className="relative text-white font-semibold transition-colors duration-300 hover:text-red-600 
+    after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-0 after:bg-red-600 
+    after:transition-all after:duration-300 hover:after:w-full gap-1 flex"
               >
                 SERVICE <ChevronDown size={16} />
               </button>
@@ -81,10 +91,14 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <a href="/Gallery" className="hover:text-red-600">
+            <a href="/Gallery" className="relative text-white font-semibold transition-colors duration-300 hover:text-red-600 
+    after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-0 after:bg-red-600 
+    after:transition-all after:duration-300 hover:after:w-full">
               GALLERY
             </a>
-            <a href="/contact" className="hover:text-red-600">
+            <a href="/contact" className="relative text-white font-semibold transition-colors duration-300 hover:text-red-600 
+    after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-0 after:bg-red-600 
+    after:transition-all after:duration-300 hover:after:w-full">
               CONTACT
             </a>
           </div>
@@ -99,10 +113,18 @@ export default function Navbar() {
           </div>
 
           {/* Phone Number */}
-          <div className="hidden md:flex items-center space-x-4 ">
-            <p className="bg-red-600 rounded-full p-2 animate-pulse"><MdCall  className="h-8 w-8"/></p>
-          <span> 9848866181</span>
+          <div className="hidden md:flex items-center space-x-4  backdrop-blur-lg px-4 py-2 rounded-full shadow-lg  ">
+            <div className="relative">
+              <div className="absolute inset-0 bg-red-500 opacity-75 rounded-full blur-md animate-ping"></div>
+              <p className="bg-red-600 text-white rounded-full p-3 shadow-md transition-transform duration-300 hover:scale-110">
+                <MdCall className="h-6 w-6" />
+              </p>
+            </div>
+            <span className="text-white font-semibold text-lg tracking-wide transition-colors duration-300 hover:text-red-500">
+              9848866181
+            </span>
           </div>
+
         </div>
 
         {/* Mobile Menu */}

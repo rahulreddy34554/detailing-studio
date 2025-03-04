@@ -1,4 +1,4 @@
-import { Services, TeamSection,  WhyChooseUs } from '@/components/HeroSlider'
+import { AutomotivePerfection, Services, TeamSection,  WhyChooseUs } from '@/components/HeroSlider'
 import React from 'react'
 import Image from 'next/image'
 
@@ -27,6 +27,7 @@ const page = () => {
           </div>
       
       <WhyChooseUs/>
+       <AutomotivePerfection/>
      <TrustedCollaboration/>
       {/* <TeamSection/> */}
       </div>
@@ -79,3 +80,5 @@ export default page
     </div>
   );
 }
+
+
