@@ -64,7 +64,7 @@ export default function CarInterestForm() {
       {/* Hero Section */}
       <div className="relative w-full">
         <img
-          src="https://cretaelectric.hyundai.co.in/assets/kv-first-D4P_nOd0.jpg"
+          src="/Main_Banner.webp"
           alt="Banner"
           className="w-full h-screen object-cover"
         />
@@ -175,8 +175,7 @@ const carOffers = [
     { name: "Hyundai I20", price: "₹7.04-11.20 Lakhs*", image: "https://bharathyundai.com/wp-content/uploads/2024/05/1656409788.png" },
     { name: "Hyundai I20 N Line", price: "₹9.99-12.51 lakhs*", image: "https://bharathyundai.com/wp-content/uploads/2024/05/1665133996.png" },
 ];
-
-export function OffersCarousel() {
+ function OffersCarousel() {
     const swiperRef = useRef<SwiperCore | null>(null);
 
     return (
@@ -255,7 +254,7 @@ const colors = [
     { name: "Red", code: "#CC0000", img: "https://imgd.aeplcdn.com/600x337/n/28v8t9b_1804859.jpg?q=80" },
 ];
 
-export function CarShowcase() {
+ function CarShowcase() {
     const [selectedCar, setSelectedCar] = useState(colors[0]);
 
     return (
@@ -324,7 +323,7 @@ export function CarShowcase() {
 
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, Home } from "lucide-react";
 
-export function Footer() {
+ function Footer() {
     return (
         <footer className="bg-gray-900 text-white py-10">
             <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -429,7 +428,7 @@ const features = [
     },
 ];
 
-export function FeaturesSection() {
+ function FeaturesSection() {
     return (
         <div className=" py-10 px-5 md:px-20">
             <h2 className="text-2xl font-bold font-serif text-center mb-6 text-black">Features</h2>
